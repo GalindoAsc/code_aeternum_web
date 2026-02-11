@@ -61,6 +61,19 @@ nav a:hover {
     color: var(--text-main);
 }
 
+.lang-switch {
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+}
+
+.lang-switch:hover {
+    background: var(--border);
+    color: white;
+}
+
 /* Hero Section */
 .hero {
     padding: 8rem 5% 6rem;
