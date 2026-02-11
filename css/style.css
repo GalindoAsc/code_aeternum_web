@@ -1,0 +1,230 @@
+/* Code Aeternum - Premium Dark Theme */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-dark: #0a0a0c;
+    --bg-card: #141419;
+    --primary: #6366f1;
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --border: #27272a;
+    --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 12, 0.8);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 5% 6rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to bottom, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px var(--primary-glow);
+}
+
+/* Products Grid */
+.products {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Footer & Legal */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 4rem 5%;
+    margin-top: 4rem;
+    background: var(--bg-card);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-col a {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+}
+
+/* Legal Page Styles */
+.legal-content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.legal-content h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.legal-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.legal-content p,
+.legal-content li {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.legal-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
