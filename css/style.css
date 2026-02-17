@@ -28,7 +28,7 @@ body {
 
 /* Header */
 header {
-    padding: 2rem 5%;
+    padding: 1.2rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,16 +37,35 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(10, 10, 12, 0.8);
+    background: rgba(10, 10, 12, 0.85);
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.5px;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* When logo is a link with an image */
+a.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+a.logo img {
+    -webkit-text-fill-color: initial;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
 }
 
 nav a {
@@ -83,11 +102,12 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     background: linear-gradient(to bottom, #fff 0%, #aaa 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -130,7 +150,7 @@ nav a:hover {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -168,6 +188,10 @@ nav a:hover {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.card-link:hover {
+    text-decoration: underline;
 }
 
 /* Footer & Legal */
@@ -240,4 +264,49 @@ footer {
 .legal-content ul {
     padding-left: 1.5rem;
     margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 4rem 5% 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legal-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
