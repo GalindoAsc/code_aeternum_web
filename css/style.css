@@ -210,6 +210,23 @@ nav a:hover::after {
     display: none !important;
 }
 
+/* Social Icons in Nav */
+nav a[aria-label] {
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.8;
+}
+
+nav a[aria-label]:hover {
+    opacity: 1;
+    color: var(--text-main);
+}
+
+nav a[aria-label]::after {
+    display: none;
+}
+
 /* ─── Hero ─── */
 .hero {
     padding: 8rem 5% 6rem;
