@@ -112,17 +112,23 @@ body {
 
 /* ─── Header ─── */
 header {
-    padding: 1rem 5%;
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 960px;
+    background: rgba(11, 13, 16, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 100px;
+    padding: 0.7rem 1.8rem;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(11, 13, 16, 0.88);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -160,7 +166,7 @@ nav {
 nav a {
     color: var(--text-muted);
     text-decoration: none;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     font-size: 0.9rem;
     font-weight: 400;
     transition: color 0.3s;
@@ -261,15 +267,7 @@ nav a:hover::after {
     animation-delay: 0.55s;
 }
 
-.hero-logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 2.5rem;
-    animation: float 5s ease-in-out infinite, hero-in 0.9s ease both;
-    animation-delay: 0s, 0.1s;
-    filter: drop-shadow(0 0 30px rgba(201, 149, 107, 0.2));
-    border-radius: 16px;
-}
+
 
 .hero-badge {
     display: inline-block;
@@ -680,6 +678,16 @@ footer {
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
     header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        background: rgba(11, 13, 16, 0.95);
         flex-direction: column;
         gap: 0.8rem;
         padding: 0.8rem 5%;
