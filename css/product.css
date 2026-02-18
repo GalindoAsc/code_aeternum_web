@@ -225,6 +225,89 @@
     flex-wrap: nowrap;
 }
 
+/* Downloads Section */
+.downloads-section {
+    text-align: center;
+    padding: 5rem 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.downloads-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.download-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.download-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 149, 107, 0.4);
+    box-shadow: 0 12px 40px rgba(201, 149, 107, 0.15),
+        0 0 60px rgba(201, 149, 107, 0.08);
+}
+
+.download-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.download-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+}
+
+.download-file {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background: var(--gradient);
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.5rem 1.8rem;
+    border-radius: 50px;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.download-card:hover .download-btn {
+    box-shadow: 0 0 20px var(--primary-glow);
+    transform: scale(1.05);
+}
+
+.downloads-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
 /* Bottom CTA */
 .bottom-cta {
     text-align: center;
@@ -263,6 +346,10 @@
         grid-template-columns: 1fr;
     }
 
+    .downloads-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .steps {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -290,5 +377,9 @@
 
     .bottom-cta h2 {
         font-size: 1.6rem;
+    }
+
+    .downloads-grid {
+        grid-template-columns: 1fr;
     }
 }
